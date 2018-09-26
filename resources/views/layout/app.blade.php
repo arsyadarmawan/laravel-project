@@ -12,8 +12,13 @@
     <body>
         @include('inc.navbar')
         <div class="container" style="padding-top: 70px;">
+            @include('inc.messages')
             @yield('content')
         </div>
+        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'article-ckeditor' );
+        </script>
     </body>
     {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 </html>
